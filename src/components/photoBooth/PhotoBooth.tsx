@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import s from "./photoBooth.module.css";
 import image1 from "../../assets/images/wedding/1.webp";
 import image2 from "../../assets/images/wedding/2.webp";
@@ -34,7 +34,6 @@ const Photo = ({ image, onClick, index }: PhotoProps) => {
 			<img
 				src={image}
 				alt={`wedding-${index + 1}`}
-				loading="lazy"
 				onLoad={() => setIsLoaded(true)}
 				className={isLoaded ? s.loaded : s.loading}
 			/>
@@ -63,7 +62,7 @@ export const PhotoBooth = () => {
 		image10,
 		image5_horizontal,
 		image11,
-		
+
 		// 한복
 		image18,
 		image15,
@@ -72,28 +71,6 @@ export const PhotoBooth = () => {
 
 		image8_horizontal,
 	];
-
-	// 이미지 프리로딩
-	useEffect(() => {
-		const preloadImages = async () => {
-			const imagePromises = images.map((src) => {
-				return new Promise((resolve, reject) => {
-					const img = new Image();
-					img.onload = resolve;
-					img.onerror = reject;
-					img.src = src;
-				});
-			});
-
-			try {
-				await Promise.all(imagePromises);
-			} catch (error) {
-				console.error("이미지 로딩 중 오류:", error);
-			}
-		};
-
-		preloadImages();
-	}, [images]);
 
 	const onClose = () => {
 		setOpened(false);
