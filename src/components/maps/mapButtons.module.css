@@ -69,8 +69,17 @@
 
 .buttons { 
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 100%;
+
+    > hr {
+        width: 1px;
+        height: 20px;
+        border-color:rgba(103,103,103, 0.2);
+        border-radius:5px;
+    }
 }
 
 .date {

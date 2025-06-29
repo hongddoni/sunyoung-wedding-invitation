@@ -62,6 +62,7 @@ export const MapsButton = () => {
 				>
 					<span>{lang[language].naverMap}</span>
 				</LinkButton>
+				<hr />
 				<LinkButton
 					url={WEDDING_HOLE_GOOGLE}
 					imageUrl={google}
@@ -69,6 +70,8 @@ export const MapsButton = () => {
 				>
 					<span>{lang[language].googleMap}</span>
 				</LinkButton>
+				<hr />
+
 				<LinkButton
 					url={WEDDING_HOLE_TMAP}
 					imageUrl={tMap}
