@@ -61,7 +61,7 @@ export const Information = () => {
 
 				<div className={s.infoWrap}>
 					<span className={s.left}>
-						<span className={s.bold}>👰🏻‍♀️{lang[language].bloom}</span>{" "}
+						<span className={s.bold}>👰🏻‍♀️{lang[language].bride}</span>{" "}
 						{lang[language].at}
 					</span>
 

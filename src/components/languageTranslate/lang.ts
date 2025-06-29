@@ -1,7 +1,7 @@
 export const lang = {
 	ko: {
-		father: "아버지",
-		mother: "어머니",
+		father: "박순화(父)",
+		mother: "최미숙(母)",
 		googleMap: "GOOGLE",
 		naverMap: "NAVER",
 		tMap: "T MAP",
