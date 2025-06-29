@@ -1,0 +1,31 @@
+.button {
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #b9b9b9;
+    color: #555555;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+    img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        flex: 1 0 0;
+    }
+
+    > span {
+        display: flex;
+        font-family: 'MaruBuriSemiBold';
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        
+        > span {
+            font-size: 10px;
+        }
+    }
+}

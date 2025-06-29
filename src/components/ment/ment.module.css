@@ -1,0 +1,125 @@
+.mentWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .ring {
+        font-size: 80px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ringText {
+            font-size: 20px;
+            font-family: 'MaruBuriBold';
+            color: #676767;
+            margin-top: 10px;
+        }
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+        
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    .ment {
+        cursor: pointer;
+        text-align: center;
+        font-family: 'MaruBuriLight';
+        font-size: 25px;
+        line-height: 2;
+        white-space: pre-line;
+        padding :0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #676767;
+    }
+
+    .date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        white-space: pre-line;
+        font-size: 25px;
+        font-family: 'MaruBuriBold';
+        color: #676767;
+        margin: 10px 0;
+    }
+
+    .mainImageWrap {
+        width: 50%;
+        border-radius: 50% 50% 8px 8px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1.08;
+        position: relative;
+    }
+
+    .mainImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nameWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+        font-family: 'MaruBuriLight';
+        color: #676767;
+        line-height: 1.2;
+
+
+        .name {
+            font-family: 'MaruBuriBold';
+        }
+    }
+
+    .br {
+        display: flex;
+        width: 70vw;
+        height: 1px;
+        margin: 3vh 0;
+        background-color: #676767;
+        opacity: 0.2;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .mentWrap {
+        .ring {
+            font-size: 25px;
+        }
+
+        .ment {
+            font-size: 14.5px;
+            line-height: 1.8;
+        }
+
+        .date {
+            font-size: 14.5px;
+        }
+
+        .nameWrap {
+            font-size: 14.5px;
+        }
+    }
+
+
+    .russia {
+        font-size: 10px;
+    }
+} 

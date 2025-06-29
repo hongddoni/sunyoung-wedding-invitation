@@ -1,0 +1,62 @@
+.information {
+    font-family: 'MaruBuri';
+    color: #676767;
+    margin-bottom: 50px;
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .infoWrap {
+            display: flex;
+            flex-direction: column;
+    
+            .left {
+                font-size: 14px;
+                width: fit-content;
+
+                padding-bottom: 3px;
+                margin-bottom: 10px;
+
+                .bold {
+                    font-weight: 600;
+                }
+            }
+    
+            .info {
+                display: flex;
+                flex-direction: column;
+                .infoItem {
+                    font-size: 14px;
+                    display: flex;
+                    gap: 10px;
+
+                    .accountWrap {
+                        .account {
+                            display: flex;
+                            gap: 10px;
+                            color: #676767;
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+}
+
+.br {
+    display: flex;
+    width: 70vw;
+    height: 1px;
+    margin: 3vh 0;
+    background-color: #676767;
+    opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+    .infoItem {
+        font-size: 12px;
+    }
+}
