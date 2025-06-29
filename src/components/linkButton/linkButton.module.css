@@ -2,11 +2,11 @@
     display: flex;
     gap: 10px;
     border-radius: 10px;
-    border: 1px solid #b9b9b9;
     color: #555555;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    border: 1px solid rgba(188,211,233, 0.3);
     
     img {
         width: 20px;

@@ -28,26 +28,6 @@ export const Modal = (props: Props) => {
 		};
 	}, [opened]);
 
-	// 외부 클릭 감지
-	useEffect(() => {
-		const handleClickOutside = (event: MouseEvent) => {
-			if (
-				modalRef.current &&
-				!modalRef.current.contains(event.target as Node)
-			) {
-				onClose();
-			}
-		};
-
-		if (opened) {
-			document.addEventListener("mousedown", handleClickOutside);
-		}
-
-		return () => {
-			document.removeEventListener("mousedown", handleClickOutside);
-		};
-	}, [opened, onClose]);
-
 	// ESC 키로 닫기
 	useEffect(() => {
 		const handleEscape = (event: KeyboardEvent) => {
