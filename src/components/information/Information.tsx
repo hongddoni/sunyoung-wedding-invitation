@@ -70,9 +70,9 @@ export const Information = () => {
 						<div className={s.infoItem}>
 							<span className={s.role}>소피아</span>
 							<span className={s.accountWrap}>
-								<CopyButton link={"47505125301012"}>
+								<CopyButton link={"475-051253-01-012"}>
 									<div className={s.account}>
-										<span>47505125301012 기업은행</span>
+										<span>475-051253-01-012 기업은행</span>
 										<img src={Copy} alt="copy" />
 									</div>
 								</CopyButton>
