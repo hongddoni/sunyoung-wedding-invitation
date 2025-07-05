@@ -11,30 +11,32 @@ import { LanguageProvider } from "./components/languageTranslate/languageProvide
 import { LanguageTranslate } from "./components/languageTranslate/LanguageTranslate";
 import { MapsButton } from "./components/maps/MapsButton";
 import { Ment } from "./components/ment/Ment";
+import { ParentProvider } from "./components/parent/parentProvider";
 
 function App() {
 	return (
 		<MainLayout>
-			<LanguageProvider>
-				<AudioProvider>
-					<LayerProvider>
-						<div>
-							<BottomLayer />
-
-							<UpperLayer>
-								<BodyLayout>
-									<Ment />
-									<MapsButton />
-									<Information />
-									<PhotoBooth />
-								</BodyLayout>
-							</UpperLayer>
-						</div>
-					</LayerProvider>
-					<Audio />
-					<LanguageTranslate />
-				</AudioProvider>
-			</LanguageProvider>
+			<ParentProvider>
+				<LanguageProvider>
+					<AudioProvider>
+						<LayerProvider>
+							<div>
+								<BottomLayer />
+								<UpperLayer>
+									<BodyLayout>
+										<Ment />
+										<MapsButton />
+										<Information />
+										<PhotoBooth />
+									</BodyLayout>
+								</UpperLayer>
+							</div>
+						</LayerProvider>
+						<Audio />
+						<LanguageTranslate />
+					</AudioProvider>
+				</LanguageProvider>
+			</ParentProvider>
 		</MainLayout>
 	);
 }
