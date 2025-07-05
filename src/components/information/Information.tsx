@@ -3,12 +3,15 @@ import { useLanguage } from "../languageTranslate/languageProvider";
 import { lang } from "../languageTranslate/lang";
 import { CopyButton } from "../buttons/CopyButton";
 import Copy from "../../assets/icons/copy.svg";
+import { useParent } from "../parent/useParent";
+import classNames from "classnames";
 
 export const Information = () => {
 	const { language } = useLanguage();
+	const isParent = useParent();
 
 	return (
-		<div className={s.information}>
+		<div className={classNames(s.information, { [s.parent]: isParent })}>
 			<div className={s.box}>
 				<div className={s.infoWrap}>
 					<span className={s.left}>

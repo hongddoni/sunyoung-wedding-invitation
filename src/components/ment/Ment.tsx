@@ -3,13 +3,15 @@ import { useLanguage } from "../languageTranslate/languageProvider";
 import { lang } from "../languageTranslate/lang";
 import DoorImage from "../../assets/images/door.png";
 import { useState } from "react";
+import { useParent } from "../parent/useParent";
+import classNames from "classnames";
 
 export const Ment = () => {
 	const { language } = useLanguage();
 	const [show, setShow] = useState(false);
-
+	const isParent = useParent();
 	return (
-		<div className={s.mentWrap}>
+		<div className={classNames(s.mentWrap, { [s.parent]: isParent })}>
 			<div className={s.ring} onClick={() => setShow(!show)}>
 				{show ? "🤵🏻💍👰🏻‍♀️" : "💍"}
 				{show && (

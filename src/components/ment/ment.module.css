@@ -116,6 +116,16 @@
         .nameWrap {
             font-size: 14.5px;
         }
+
+        &.parent {
+            .ment {
+                font-size: 20px;
+            }
+            .nameWrap {
+                width: 80%;
+                font-size: 20px;
+            }
+        }
     }
 
 

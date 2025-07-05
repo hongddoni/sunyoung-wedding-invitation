@@ -59,4 +59,22 @@
     .infoItem {
         font-size: 12px;
     }
+
+    .information {
+        &.parent {
+            .box {
+                .info {
+                    width: 70vw;
+                    gap: 10px;
+                    .infoItem {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 20px;
+                        
+                    }
+                }
+            }
+            
+        }
+    }
 }

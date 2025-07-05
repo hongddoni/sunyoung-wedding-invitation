@@ -6,6 +6,8 @@ import { lang } from "../languageTranslate/lang";
 import { useLanguage } from "../languageTranslate/languageProvider";
 import weddingMap from "../../assets/images/wedding_map.png";
 import s from "./mapButtons.module.css";
+import { useParent } from "../parent/useParent";
+import classNames from "classnames";
 
 const WEDDING_HOLE_NAVER =
 	"https://map.naver.com/p/entry/place/12077860?c=15.00,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506262326&locale=ko&svcName=map_pcv5L";
@@ -17,9 +19,9 @@ const WEDDING_HOLE_TMAP = "https://tmap.life/2cd44420";
 
 export const MapsButton = () => {
 	const { language } = useLanguage();
-
+	const isParent = useParent();
 	return (
-		<div className={s.buttonWrap}>
+		<div className={classNames(s.buttonWrap, { [s.parent]: isParent })}>
 			<div className={s.map}>
 				<div className={s.mapName}>
 					<div className={s.mapNameWrap}>
@@ -54,8 +56,19 @@ export const MapsButton = () => {
 						</span>
 					</div>
 				</div>
-				<img src={weddingMap} alt="weddingMap" className={s.mapImage} />
+				{!isParent && (
+					<img
+						src={weddingMap}
+						alt="weddingMap"
+						className={s.mapImage}
+					/>
+				)}
 			</div>
+			{isParent && (
+				<div className={s.dividerWrap}>
+					<span>{lang[language].navigation}</span>
+				</div>
+			)}
 			<div className={s.buttons}>
 				<LinkButton
 					url={WEDDING_HOLE_NAVER}
