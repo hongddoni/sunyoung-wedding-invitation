@@ -147,11 +147,13 @@
                     align-items: center;
                     text-align: center;
                     max-width: 80%;
+                  
                     .left {
                         font-size: 20px;
                     }
                     .right {
                         font-size: 20px;
+                        white-space: wrap;
                     }
 
                     .carRight {

@@ -45,14 +45,18 @@ export const MapsButton = () => {
 					<div className={s.transport}>
 						<span className={s.left}>{lang[language].bus}</span>
 						<span className={s.right}>
-							{lang[language].howToBus}
+							{isParent
+								? lang[language].howToBusParent
+								: lang[language].howToBus}
 						</span>
 					</div>
 
 					<div className={s.transport}>
 						<span className={s.left}>{lang[language].car}</span>
 						<span className={s.carRight}>
-							{lang[language].howToCar}
+							{isParent
+								? lang[language].howToCarParent
+								: lang[language].howToCar}
 						</span>
 					</div>
 				</div>
