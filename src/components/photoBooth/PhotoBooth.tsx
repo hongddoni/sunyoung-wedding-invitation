@@ -19,6 +19,7 @@ import image16 from "../../assets/images/wedding/16.webp";
 import image17 from "../../assets/images/wedding/17.webp";
 import image18 from "../../assets/images/wedding/18.webp";
 import { SlidingModal } from "../slidingModal/SlidingModal";
+import { useSearchParams } from "react-router-dom";
 
 interface PhotoProps {
 	image: string;
@@ -44,6 +45,10 @@ const Photo = ({ image, onClick, index }: PhotoProps) => {
 export const PhotoBooth = () => {
 	const [opened, setOpened] = useState(false);
 	const [selectedId, setSelectedId] = useState<number | null>(null);
+	const [searchParams] = useSearchParams();
+	const isParent = searchParams.get("parent");
+
+	console.log(isParent);
 
 	const images = [
 		// 홍콩
@@ -72,6 +77,26 @@ export const PhotoBooth = () => {
 		image8_horizontal,
 	];
 
+	const parentImages = [
+		// 홍콩
+		image7_horizontal,
+		image4_horizontal,
+		image14,
+		image2,
+		image9,
+
+		// 일반
+		image6_horizontal,
+		image12,
+		image1,
+		image10,
+
+		// 한복
+		image15,
+		image17,
+		image16,
+	];
+
 	const onClose = () => {
 		setOpened(false);
 		setSelectedId(null);
@@ -79,7 +104,7 @@ export const PhotoBooth = () => {
 
 	return (
 		<div className={s.photoBooth}>
-			{images.map((image, index) => (
+			{(isParent ? parentImages : images).map((image, index) => (
 				<Photo
 					key={index}
 					image={image}
@@ -94,7 +119,7 @@ export const PhotoBooth = () => {
 				<SlidingModal
 					opened={opened}
 					onClose={onClose}
-					images={images}
+					images={isParent ? parentImages : images}
 					selectedId={selectedId}
 				/>
 			)}
