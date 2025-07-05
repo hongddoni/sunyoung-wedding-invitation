@@ -23,6 +23,8 @@ export const MapsButton = () => {
 			<div className={s.map}>
 				<div className={s.mapName}>
 					<div className={s.mapNameWrap}>
+						<div className={s.date}>{lang[language].date}</div>
+
 						<span className={s.name}>
 							{lang[language].weddingHole}
 						</span>
@@ -80,8 +82,6 @@ export const MapsButton = () => {
 					<span>{lang[language].tMap}</span>
 				</LinkButton>
 			</div>
-
-			<div className={s.date}>{lang[language].date}</div>
 
 			<div className={s.br}>{lang[language].message}</div>
 		</div>

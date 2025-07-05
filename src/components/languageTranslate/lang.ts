@@ -8,7 +8,9 @@ export const lang = {
 		ment: `두 사람이 서로의 인연을
 		결혼이라는 이름으로 맺고자 합니다.
 		귀한 걸음으로 자리하시어
-		저희의 새로운 출발을 축하해 주시면 감사하겠습니다.
+		저희의 새로운 출발을
+		축하해 주시면 감사하겠습니다.
+		
 		`,
 		parentSy: "박순화 · 최미숙 의 아들 ",
 		parentSf: "Naumenko Boris · Naumenko Viktoriia 의 딸 ",
