@@ -34,7 +34,9 @@ export const Ment = () => {
 							? lang[language].parentKorSf
 							: lang[language].parentSf}
 					</span>
-					<span className={s.name}>Sofia</span>
+					<span className={s.name}>
+						{isParent ? "소피아" : "Sofia"}
+					</span>
 				</span>
 				<div className={s.br} />
 			</div>
