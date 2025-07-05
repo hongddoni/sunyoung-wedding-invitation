@@ -20,6 +20,7 @@ import image17 from "../../assets/images/wedding/17.webp";
 import image18 from "../../assets/images/wedding/18.webp";
 import { SlidingModal } from "../slidingModal/SlidingModal";
 import { useParent } from "../parent/useParent";
+import classNames from "classnames";
 
 export const PhotoBooth = () => {
 	const [opened, setOpened] = useState(false);
@@ -73,7 +74,7 @@ export const PhotoBooth = () => {
 	};
 
 	return (
-		<div className={s.photoBooth}>
+		<div className={classNames(s.photoBooth, isParent && s.parent)}>
 			{(isParent ? parentImages : images).map((image, index) => (
 				<div
 					className={s.photo}

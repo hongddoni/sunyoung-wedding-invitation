@@ -5,6 +5,11 @@
     width: 100%;
     gap: 0.5vw;
 
+    &.parent {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
     .photo {
         cursor: pointer;
         border-radius: 0.8vw;
