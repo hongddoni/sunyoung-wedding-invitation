@@ -3,16 +3,16 @@ import s from "./photoBooth.module.css";
 import image1 from "../../assets/images/wedding/1.webp";
 import image2 from "../../assets/images/wedding/2.webp";
 import image3 from "../../assets/images/wedding/3.webp";
-import image4_horizontal from "../../assets/images/wedding/4.webp";
-import image5_horizontal from "../../assets/images/wedding/5.webp";
-import image6_horizontal from "../../assets/images/wedding/6.webp";
-import image7_horizontal from "../../assets/images/wedding/7.webp";
-import image8_horizontal from "../../assets/images/wedding/8.webp";
+import image4 from "../../assets/images/wedding/4.webp";
+import image5 from "../../assets/images/wedding/5.webp";
+import image6 from "../../assets/images/wedding/6.webp";
+import image7 from "../../assets/images/wedding/7.webp";
+import image8 from "../../assets/images/wedding/8.webp";
 import image9 from "../../assets/images/wedding/9.webp";
 import image10 from "../../assets/images/wedding/10.webp";
 import image11 from "../../assets/images/wedding/11.webp";
 import image12 from "../../assets/images/wedding/12.webp";
-import image13_horizontal from "../../assets/images/wedding/13.webp";
+import image13 from "../../assets/images/wedding/13.webp";
 import image14 from "../../assets/images/wedding/14.webp";
 import image15 from "../../assets/images/wedding/15.webp";
 import image16 from "../../assets/images/wedding/16.webp";
@@ -29,39 +29,32 @@ export const PhotoBooth = () => {
 
 	const images = [
 		// 홍콩
-		image13_horizontal,
-		image7_horizontal,
-		image4_horizontal,
-		image14,
+		image1,
+
+		image5,
+		image4,
+		image7,
 		image2,
 		image3,
-		image9,
+		image6,
 
 		// 일반
-		image6_horizontal,
+		image8,
 		image12,
-		image1,
+
 		image10,
-		image5_horizontal,
+		image9,
 		image11,
+		image13,
 
 		// 한복
+		image17,
 		image18,
 		image15,
-		image17,
 		image16,
-
-		image8_horizontal,
+		image14,
 	];
-
-	const parentImages = [
-		image13_horizontal,
-		image3,
-		image5_horizontal,
-		image11,
-		image18,
-		image8_horizontal,
-	];
+	const parentImages = [image3, image7, image14, image18, image13, image8];
 
 	const onClose = () => {
 		setOpened(false);
