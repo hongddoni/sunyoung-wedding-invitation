@@ -54,23 +54,12 @@ export const PhotoBooth = () => {
 	];
 
 	const parentImages = [
-		// 홍콩
-		image7_horizontal,
-		image4_horizontal,
-		image14,
-		image2,
-		image9,
-
-		// 일반
-		image6_horizontal,
-		image12,
-		image1,
-		image10,
-
-		// 한복
-		image15,
-		image17,
-		image16,
+		image13_horizontal,
+		image3,
+		image5_horizontal,
+		image11,
+		image18,
+		image8_horizontal,
 	];
 
 	const onClose = () => {
@@ -86,7 +75,11 @@ export const PhotoBooth = () => {
 	return (
 		<div className={s.photoBooth}>
 			{(isParent ? parentImages : images).map((image, index) => (
-				<div className={s.photo} onClick={() => handleClick(index)}>
+				<div
+					className={s.photo}
+					key={image}
+					onClick={() => handleClick(index)}
+				>
 					<img src={image} alt={`wedding-${index + 1}`} />
 				</div>
 			))}
