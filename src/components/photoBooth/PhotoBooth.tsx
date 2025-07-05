@@ -54,7 +54,8 @@ export const PhotoBooth = () => {
 		image16,
 		image14,
 	];
-	const parentImages = [image3, image7, image14, image18, image13, image8];
+
+	const parentImages = [image1, image6, image13, image12, image18, image14];
 
 	const onClose = () => {
 		setOpened(false);
