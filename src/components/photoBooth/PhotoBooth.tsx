@@ -19,7 +19,7 @@ import image16 from "../../assets/images/wedding/16.webp";
 import image17 from "../../assets/images/wedding/17.webp";
 import image18 from "../../assets/images/wedding/18.webp";
 import { SlidingModal } from "../slidingModal/SlidingModal";
-import { useSearchParams } from "react-router-dom";
+import { useParent } from "../parent/useParent";
 
 interface PhotoProps {
 	image: string;
@@ -45,8 +45,7 @@ const Photo = ({ image, onClick, index }: PhotoProps) => {
 export const PhotoBooth = () => {
 	const [opened, setOpened] = useState(false);
 	const [selectedId, setSelectedId] = useState<number | null>(null);
-	const [searchParams] = useSearchParams();
-	const isParent = searchParams.get("parent");
+	const isParent = useParent();
 
 	console.log(isParent);
 
