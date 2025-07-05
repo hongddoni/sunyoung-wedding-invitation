@@ -21,33 +21,10 @@ import image18 from "../../assets/images/wedding/18.webp";
 import { SlidingModal } from "../slidingModal/SlidingModal";
 import { useParent } from "../parent/useParent";
 
-interface PhotoProps {
-	image: string;
-	onClick: () => void;
-	index: number;
-}
-
-const Photo = ({ image, onClick, index }: PhotoProps) => {
-	const [isLoaded, setIsLoaded] = useState(false);
-
-	return (
-		<div className={s.photo} onClick={onClick}>
-			<img
-				src={image}
-				alt={`wedding-${index + 1}`}
-				onLoad={() => setIsLoaded(true)}
-				className={isLoaded ? s.loaded : s.loading}
-			/>
-		</div>
-	);
-};
-
 export const PhotoBooth = () => {
 	const [opened, setOpened] = useState(false);
 	const [selectedId, setSelectedId] = useState<number | null>(null);
 	const isParent = useParent();
-
-	console.log(isParent);
 
 	const images = [
 		// 홍콩
@@ -101,18 +78,17 @@ export const PhotoBooth = () => {
 		setSelectedId(null);
 	};
 
+	const handleClick = (index: number) => {
+		setSelectedId(index);
+		setOpened(true);
+	};
+
 	return (
 		<div className={s.photoBooth}>
 			{(isParent ? parentImages : images).map((image, index) => (
-				<Photo
-					key={index}
-					image={image}
-					index={index}
-					onClick={() => {
-						setSelectedId(index);
-						setOpened(true);
-					}}
-				/>
+				<div className={s.photo} onClick={() => handleClick(index)}>
+					<img src={image} alt={`wedding-${index + 1}`} />
+				</div>
 			))}
 			{selectedId !== null && (
 				<SlidingModal
