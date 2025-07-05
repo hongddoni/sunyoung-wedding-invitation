@@ -29,6 +29,7 @@ export const MapsButton = () => {
 
 						<span className={s.name}>
 							{lang[language].weddingHole}
+							{isParent && " (11층)"}
 						</span>
 						<span className={s.address}>
 							{lang[language].address}

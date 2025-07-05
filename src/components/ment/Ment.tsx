@@ -30,7 +30,9 @@ export const Ment = () => {
 				</span>
 				<span>
 					<span className={`${language === "ru" ? s.russia : ""}`}>
-						{lang[language].parentSf}
+						{isParent
+							? lang[language].parentKorSf
+							: lang[language].parentSf}
 					</span>
 					<span className={s.name}>Sofia</span>
 				</span>

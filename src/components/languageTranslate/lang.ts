@@ -14,6 +14,8 @@ export const lang = {
 		`,
 		parentSy: "박순화 · 최미숙 의 아들 ",
 		parentSf: "Naumenko Boris · Naumenko Viktoriia 의 딸 ",
+		parentKorSf: `나우멘코 보리스 ·
+나우멘코 빅토리아 의 딸 `,
 
 		weddingHole: "더 테라스 웨딩 & 파티",
 		address: "경기도 고양시 일산동구 강석로9",
@@ -58,7 +60,7 @@ export const lang = {
 		`,
 		parentSy: "Сын господина 박순화 и госпожи 최미숙 — ",
 		parentSf: "Дочь господина Naumenko Boris и Naumenko Viktoriia — ",
-
+		parentKorSf: "Дочь господина Naumenko Boris и Naumenko Viktoriia — ",
 		weddingHole: "The Terrace Wedding & Party",
 		address: "Кансок-ро 9, Ильсан-дон-гу, Коян-си, Кёнгидо",
 		metro: "Метро",
